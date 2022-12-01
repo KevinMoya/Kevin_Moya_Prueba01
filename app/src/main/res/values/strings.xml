@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Kevin_Moya_Prueba01</string>
+
+    <string name="textView_Nombres">Nombres: </string>
+    <string name="textView_Apellidos">Apellidos: </string>
+
+    <string name="textView_Dividendo">Dividendo: </string>
+    <string name="textView_Divisor">Divisor: </string>
+
+    <string name="textView_ParteEntera">Parte entera: </string>
+    <string name="textView_Residuo">Residuo: </string>
 </resources>
