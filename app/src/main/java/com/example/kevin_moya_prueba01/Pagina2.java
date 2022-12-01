@@ -2,7 +2,9 @@ package com.example.kevin_moya_prueba01;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -27,6 +29,19 @@ public class Pagina2 extends AppCompatActivity {
     }
 
     private void clickSiguiente() {
+        siguiente.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String nombres = nombre.getText().toString();
+                String apellidos = apellido.getText().toString();
 
+                Intent toThird = new Intent(Pagina2.this, Pagina3.class);
+
+                toThird.putExtra("nombres", nombres);
+                toThird.putExtra("apellidos", apellidos);
+
+                startActivity(toThird);
+            }
+        });
     }
 }

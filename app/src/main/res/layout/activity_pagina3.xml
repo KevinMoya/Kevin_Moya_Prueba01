@@ -14,6 +14,7 @@
         android:layout_marginStart="152dp"
         android:layout_marginTop="52dp"
         android:ems="10"
+        android:enabled="false"
         android:hint="@string/editText_Hint_Nombres"
         android:inputType="textPersonName"
         android:minHeight="48dp"
@@ -38,7 +39,7 @@
         android:layout_marginTop="176dp"
         android:ems="10"
         android:hint="@string/editText_Hint_Dividendo"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:minHeight="48dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -52,7 +53,7 @@
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/editText_Hint_Numero"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:minHeight="48dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -85,7 +86,7 @@
         android:layout_marginTop="228dp"
         android:ems="10"
         android:hint="@string/editText_Hint_Divisor"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:minHeight="48dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -108,6 +109,7 @@
         android:layout_marginTop="104dp"
         android:autofillHints=""
         android:ems="10"
+        android:enabled="false"
         android:hint="@string/editText_Hint_Apellidos"
         android:inputType="textPersonName"
         android:minHeight="48dp"
