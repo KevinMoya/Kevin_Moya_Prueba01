@@ -9,4 +9,6 @@
 
     <string name="textView_ParteEntera">Parte entera: </string>
     <string name="textView_Residuo">Residuo: </string>
+
+    <string name="textView_NumeroInvertido">Nùmero invertido: </string>
 </resources>
