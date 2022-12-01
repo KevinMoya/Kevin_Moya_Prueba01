@@ -34,7 +34,8 @@
         android:minHeight="48dp"
         android:text="Name"
         tools:layout_editor_absoluteX="137dp"
-        tools:layout_editor_absoluteY="352dp" />
+        tools:layout_editor_absoluteY="352dp"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/editTextTextPersonName11"
@@ -152,7 +153,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Button"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="588dp" />
+        tools:layout_editor_absoluteX="157dp"
+        tools:layout_editor_absoluteY="586dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
