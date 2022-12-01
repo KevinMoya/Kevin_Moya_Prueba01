@@ -23,7 +23,7 @@
     <string name="editText_Hint_Residuo">Residuo</string>
 
     <string name="editText_Hint_NumeroInvertido">Numero Invertido</string>
-    <string name="editText_Hint_Numero">Residuo</string>
+    <string name="editText_Hint_Numero">Numero</string>
 
     <string name="button_siguinte">Siguiente</string>
     <string name="button_resultado">Mostrar Resultados</string>

@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -37,8 +38,18 @@ public class Pagina3 extends AppCompatActivity {
                 numero = findViewById(R.id.editText_NumeroInvertido3);
 
                 String divr = divisor.getText().toString();
-                String divr = divisor.getText().toString();
+                String divd = dividendo.getText().toString();
+                String num = numero.getText().toString();
 
+                Intent intent = new Intent();
+                intent.setData(Uri.parse(divr));
+                intent.setData(Uri.parse(divd));
+                intent.setData(Uri.parse(num));
+
+                //indicar el IDE que el activity se cierra correctamente
+                setResult(Activity.RESULT_OK, intent);
+
+                finish();
 
             }
         });

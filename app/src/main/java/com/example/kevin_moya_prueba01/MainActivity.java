@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    Button siguiente;
+    Button siguiente, resultados;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +22,26 @@ public class MainActivity extends AppCompatActivity {
         siguiente = findViewById(R.id.button_Siguiente1);
 
         clickSiguiente();
+        clickResultados();
+    }
+
+    private void clickResultados() {
+        resultados = findViewById(R.id.button_resultados);
+
+        resultados.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int dividendo = 0;
+                int divisor = 0;
+                int entero = 0;
+                int residuo = 0;
+
+                for(int i = divisor; i <= dividendo; i+=divisor){
+
+                }
+
+            }
+        });
     }
 
     private void clickSiguiente() {
