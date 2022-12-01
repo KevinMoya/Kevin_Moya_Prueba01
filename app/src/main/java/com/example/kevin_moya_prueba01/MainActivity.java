@@ -29,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent toSecond = new Intent(MainActivity.this, Pagina2.class);
+
+                startActivity(toSecond);
             }
         });
     }
