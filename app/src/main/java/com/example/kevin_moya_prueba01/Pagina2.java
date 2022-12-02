@@ -28,8 +28,8 @@ public class Pagina2 extends AppCompatActivity {
                         Intent data = result.getData();
                         cerrar.setEnabled(true);
                         String[] resultado = data.getDataString().split("_");
-                        dividendo.setText(resultado[0]);
-                        divisor.setText(resultado[1]);
+                        dividendo.setText(resultado[1]);
+                        divisor.setText(resultado[0]);
                         numero.setText(resultado[2]);
                     }
                 }

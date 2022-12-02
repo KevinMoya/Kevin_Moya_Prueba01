@@ -70,11 +70,29 @@ public class MainActivity extends AppCompatActivity {
                 int divd = Integer.valueOf(dividendo.getText().toString());
                 int divr = Integer.valueOf(divisor.getText().toString());
 
-                for(int i = divr; i <= divd; i+=divr){
+                int cos = 0;
 
+                while (divd > 0) {
+                    cos++;
+                    divd = divd - divr;
                 }
 
+                parteEntera.setText(String.valueOf(cos -1));
+                residuo.setText(String.valueOf( - divd -1));
+
+
+                int invertido = 0, resto;
+
+
+                while( num > 0 ) {
+                    resto = num % 10;
+                    invertido = invertido * 10 + resto;
+                    num /= 10;
+                }
+
+                numero.setText(String.valueOf(invertido));
             }
+
         });
     }
 
