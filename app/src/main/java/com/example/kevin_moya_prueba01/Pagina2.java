@@ -25,7 +25,7 @@ public class Pagina2 extends AppCompatActivity {
 
                     if (result.getResultCode() == Activity.RESULT_OK){
                         Intent data = result.getData();
-                        String[] resultado = data.getDataString().toString().split(".");
+                        String[] resultado = data.getData().toString().split(".");
                         dividendo.setText(resultado[0]);
                         divisor.setText(resultado[1]);
                         numero.setText(data.getDataString());
