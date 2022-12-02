@@ -37,16 +37,15 @@ public class Pagina3 extends AppCompatActivity {
                 divisor = findViewById(R.id.editText_Divisor3);
                 numero = findViewById(R.id.editText_NumeroInvertido3);
 
+
                 String divr = divisor.getText().toString();
                 String divd = dividendo.getText().toString();
                 String num = numero.getText().toString();
 
-                Intent intent = new Intent();
-                intent.setData(Uri.parse(divr));
-                intent.setData(Uri.parse(divd));
-                intent.setData(Uri.parse(num));
+                String send = divr + "." + divd + "." + num;
 
-                //indicar el IDE que el activity se cierra correctamente
+                Intent intent = new Intent();
+                intent.setData(Uri.parse(send));
                 setResult(Activity.RESULT_OK, intent);
 
                 finish();

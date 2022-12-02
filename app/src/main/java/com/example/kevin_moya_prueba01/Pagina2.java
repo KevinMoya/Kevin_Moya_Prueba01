@@ -22,11 +22,13 @@ public class Pagina2 extends AppCompatActivity {
             new ActivityResultCallback<ActivityResult>() {
                 @Override
                 public void onActivityResult(ActivityResult result) {
-                    //comprobar si la ventana hija(ThisActivity) se cerro correctamente
 
                     if (result.getResultCode() == Activity.RESULT_OK){
                         Intent data = result.getData();
-                        dividendo.setText(data.getDataString());
+                        String[] resultado = data.getDataString().toString().split(".");
+                        dividendo.setText(resultado[0]);
+                        divisor.setText(resultado[1]);
+                        numero.setText(data.getDataString());
                         cerrar.setEnabled(true);
                     }
                 }
@@ -50,6 +52,11 @@ public class Pagina2 extends AppCompatActivity {
         cerrar = findViewById(R.id.button_cerrar2);
 
         clickSiguiente();
+        clickCerrar();
+    }
+
+    private void clickCerrar() {
+
     }
 
     private void clickSiguiente() {
@@ -64,7 +71,7 @@ public class Pagina2 extends AppCompatActivity {
                 toThird.putExtra("nombres", nombres);
                 toThird.putExtra("apellidos", apellidos);
 
-                startActivity(toThird);
+                activityResult.launch(toThird);;
             }
         });
     }
