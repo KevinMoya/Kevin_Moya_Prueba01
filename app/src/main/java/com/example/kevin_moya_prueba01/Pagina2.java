@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -25,11 +26,12 @@ public class Pagina2 extends AppCompatActivity {
 
                     if (result.getResultCode() == Activity.RESULT_OK){
                         Intent data = result.getData();
-                        String[] resultado = data.getData().toString().split(".");
+                        cerrar.setEnabled(true);
+                        String[] resultado = data.getDataString().split("_");
                         dividendo.setText(resultado[0]);
                         divisor.setText(resultado[1]);
-                        numero.setText(data.getDataString());
-                        cerrar.setEnabled(true);
+                        numero.setText(resultado[2]);
+
                     }
                 }
             });
@@ -56,7 +58,13 @@ public class Pagina2 extends AppCompatActivity {
     }
 
     private void clickCerrar() {
+        String send = nombre.getText().toString() + "_"+ apellido.getText().toString() + "_" + dividendo.getText().toString() + "_" + divisor.getText().toString() + "_" + numero.getText().toString();
 
+        Intent intent = new Intent();
+        intent.setData(Uri.parse(send));
+        setResult(Activity.RESULT_OK, intent);
+
+        finish();
     }
 
     private void clickSiguiente() {

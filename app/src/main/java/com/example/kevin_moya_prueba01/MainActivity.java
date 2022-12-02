@@ -11,9 +11,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
     Button siguiente, resultados;
+    EditText nombre, apellido, dividendo, divisor, parteEntera, residuo, numero;
 
     ActivityResultLauncher<Intent> activityResult = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),
@@ -23,6 +25,11 @@ public class MainActivity extends AppCompatActivity {
 
                     if (result.getResultCode() == Activity.RESULT_OK){
                         Intent data = result.getData();
+                        String[] resultado = data.getDataString().split("_");
+                        resultados.setEnabled(true);
+
+
+
                     }
                 }
             });
@@ -36,7 +43,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void iniciarPrograma() {
+        nombre = findViewById(R.id.editText_Nombres1);
+        apellido = findViewById(R.id.editText_Apellidos1);
+        dividendo = findViewById(R.id.editText_Dividendo1);
+        divisor = findViewById(R.id.editText_Divisor1);
+        //parteEntera = findViewById();
+        numero = findViewById(R.id.editText_NumeroInvertido1);
+
         siguiente = findViewById(R.id.button_Siguiente1);
+        resultados = findViewById(R.id.button_resultados);
+
 
         clickSiguiente();
         clickResultados();

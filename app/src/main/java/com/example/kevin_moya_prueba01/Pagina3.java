@@ -42,7 +42,7 @@ public class Pagina3 extends AppCompatActivity {
                 String divd = dividendo.getText().toString();
                 String num = numero.getText().toString();
 
-                String send = divr + "." + divd + "." + num;
+                String send = divr + "_" + divd + "_" + num;
 
                 Intent intent = new Intent();
                 intent.setData(Uri.parse(send));
