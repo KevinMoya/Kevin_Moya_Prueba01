@@ -73,18 +73,23 @@ public class MainActivity extends AppCompatActivity {
                 int cos = 0;
 
                 while (divd > 0) {
-                    cos++;
+
+                    if (divd< divr) {
+                        break;
+                    }
                     divd = divd - divr;
+                    cos++;
                 }
 
-                parteEntera.setText(String.valueOf(cos -1));
-                residuo.setText(String.valueOf( - divd -1));
+                parteEntera.setText(String.valueOf(cos));
+                residuo.setText(String.valueOf(divd));
 
 
                 int invertido = 0, resto;
 
 
                 while( num > 0 ) {
+
                     resto = num % 10;
                     invertido = invertido * 10 + resto;
                     num /= 10;
