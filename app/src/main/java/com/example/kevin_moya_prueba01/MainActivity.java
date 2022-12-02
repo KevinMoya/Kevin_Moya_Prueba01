@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
+    int num;
     Button siguiente, resultados;
     EditText nombre, apellido, dividendo, divisor, parteEntera, residuo, numero;
 
@@ -24,12 +25,22 @@ public class MainActivity extends AppCompatActivity {
                 public void onActivityResult(ActivityResult result) {
 
                     if (result.getResultCode() == Activity.RESULT_OK){
+                        nombre = findViewById(R.id.editText_Nombres1);
+                        apellido = findViewById(R.id.editText_Apellidos1);
+                        dividendo = findViewById(R.id.editText_Dividendo1);
+                        divisor = findViewById(R.id.editText_Divisor1);
+                        parteEntera = findViewById(R.id.editText_ParteEntera1);
+                        residuo = findViewById(R.id.editText_Residuo1);
+                        numero = findViewById(R.id.editText_NumeroInvertido1);
+
                         Intent data = result.getData();
                         String[] resultado = data.getDataString().split("_");
                         resultados.setEnabled(true);
-
-
-
+                        nombre.setText(resultado[0]);
+                        apellido.setText(resultado[1]);
+                        dividendo.setText(resultado[2]);
+                        divisor.setText(resultado[3]);
+                        num = Integer.valueOf(resultado[4]);
                     }
                 }
             });
@@ -43,13 +54,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void iniciarPrograma() {
-        nombre = findViewById(R.id.editText_Nombres1);
-        apellido = findViewById(R.id.editText_Apellidos1);
-        dividendo = findViewById(R.id.editText_Dividendo1);
-        divisor = findViewById(R.id.editText_Divisor1);
-        //parteEntera = findViewById();
-        numero = findViewById(R.id.editText_NumeroInvertido1);
-
         siguiente = findViewById(R.id.button_Siguiente1);
         resultados = findViewById(R.id.button_resultados);
 
@@ -59,17 +63,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void clickResultados() {
-        resultados = findViewById(R.id.button_resultados);
 
         resultados.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int dividendo = 0;
-                int divisor = 0;
-                int entero = 0;
-                int residuo = 0;
+                int divd = Integer.valueOf(dividendo.getText().toString());
+                int divr = Integer.valueOf(divisor.getText().toString());
 
-                for(int i = divisor; i <= dividendo; i+=divisor){
+                for(int i = divr; i <= divd; i+=divr){
 
                 }
 

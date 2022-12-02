@@ -31,7 +31,6 @@ public class Pagina2 extends AppCompatActivity {
                         dividendo.setText(resultado[0]);
                         divisor.setText(resultado[1]);
                         numero.setText(resultado[2]);
-
                     }
                 }
             });
@@ -58,13 +57,18 @@ public class Pagina2 extends AppCompatActivity {
     }
 
     private void clickCerrar() {
-        String send = nombre.getText().toString() + "_"+ apellido.getText().toString() + "_" + dividendo.getText().toString() + "_" + divisor.getText().toString() + "_" + numero.getText().toString();
+        cerrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String send = nombre.getText().toString() + "_"+ apellido.getText().toString() + "_" + dividendo.getText().toString() + "_" + divisor.getText().toString() + "_" + numero.getText().toString();
 
-        Intent intent = new Intent();
-        intent.setData(Uri.parse(send));
-        setResult(Activity.RESULT_OK, intent);
+                Intent intent = new Intent();
+                intent.setData(Uri.parse(send));
+                setResult(Activity.RESULT_OK, intent);
 
-        finish();
+                finish();
+            }
+        });
     }
 
     private void clickSiguiente() {
